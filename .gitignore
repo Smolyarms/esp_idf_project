@@ -85,3 +85,5 @@ managed_components/
 .espressif/
 .vscode/
 *.txt
+!CMakeLists.txt
+!**/CMakeLists.txt
