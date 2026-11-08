@@ -161,7 +161,7 @@ static void play_success_melody(void)
 // Запуск сирени "Твої очі ліхтарики"
 static void play_alarm_melody(void)
 {
-    ESP_LOGE(TAG, "!!! ЗАРІЗАЛИ !!! Грають ліхтарики...");
+    ESP_LOGE(TAG, "!!! LOOP !!! Вже не вибратись");
     
     // Граємо мелодію по колу, поки пристрій увімкнений
     while (1) {
