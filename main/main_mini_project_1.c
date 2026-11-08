@@ -17,42 +17,51 @@
 #define SYSTEM_TICK_MS          10      
 static const char *TAG = "safe_safe";
 
-#define NOTE_D4  294
 #define NOTE_E4  330
-#define NOTE_F4  349
-#define NOTE_G4  392
 #define NOTE_A4  440
-#define NOTE_AS4 466
+#define NOTE_D5  587
+#define NOTE_C5  523
+#define NOTE_A3  220
+#define NOTE_C4  262
+#define NOTE_B3  247
+#define NOTE_B4  494
+#define NOTE_E5  659
+#define REST     0
 
-
-// Мелодія сигналізації "Ліхтарики"
+// Мелодія сигналізації
 const int melody[] = {
-    NOTE_A4, NOTE_A4, NOTE_A4, NOTE_G4, NOTE_F4, NOTE_G4, NOTE_A4, NOTE_A4,
-    NOTE_A4, NOTE_A4, NOTE_G4, NOTE_F4, NOTE_G4,                          
-    NOTE_G4, NOTE_G4, NOTE_G4, NOTE_F4, NOTE_E4, NOTE_F4, NOTE_G4, NOTE_G4, 
-    NOTE_G4, NOTE_G4, NOTE_F4, NOTE_E4, NOTE_D4                           
+  NOTE_A4, NOTE_E5, NOTE_A4, NOTE_E5,
+  NOTE_B4, NOTE_E5, NOTE_B4, NOTE_E5,
+  NOTE_C5, NOTE_E5, NOTE_C5, NOTE_E5,
+  NOTE_D5, NOTE_E5, NOTE_D5, NOTE_E5
 };
 
+// Тривалість кожної ноти в мілісекундах
 const int durations[] = {
-    250,     250,     250,     250,     250,     250,     500,     500,     
-    250,     250,     250,     250,     1000,                             
-    250,     250,     250,     250,     250,     250,     500,     500,     
-    250,     250,     250,     250,     1000                              
+  600, 1200, 600, 1200,
+  600, 1200, 600, 1200,
+  600, 1200, 600, 1200,
+  600, 1200, 600, 1200
 };
 
 #define MELODY_LENGTH (sizeof(melody) / sizeof(melody[0]))
 
 // Мелодія успіху
 const int melody_f1[] = {
-    NOTE_D4, NOTE_D4, NOTE_D4, NOTE_D4, 
-    NOTE_E4, NOTE_F4, NOTE_G4, NOTE_A4, NOTE_AS4,
-    NOTE_A4, NOTE_G4, NOTE_F4, NOTE_E4, NOTE_D4
+    NOTE_A3, NOTE_A3, NOTE_A3,
+    NOTE_E4,
+    REST,
+    NOTE_E4, NOTE_E4,
+    NOTE_C4,
+    NOTE_B3
 };
 
 const int durations_f1[] = {
-    100, 100, 100, 100, 
-    80,  80,  80,  80,  80, 
-    80,  80,  80,  80,  400
+    300, 300, 200,
+    400,
+    350,
+    350, 200,
+    350, 350
 };
 
 #define MELODY_F1_LENGTH (sizeof(melody_f1) / sizeof(melody_f1[0]))
